@@ -1,0 +1,25 @@
+=== Customer Churn Prediction Model Performance Summary ===
+
+1. Baseline Random Forest Classifier (Balanced Weights)
+- Dataset: 20% (667 rows)
+- Test Accuracy: 0.9179
+- Class 1 (Churn) Recall: 0.42
+- Class 1 (Churn) F1-score: 0.59
+
+2. Random Forest with SMOTE (20% Dataset)
+- Dataset: 20% (667 rows)
+- Test Accuracy: 0.9403
+- Class 1 (Churn) Recall: 0.58
+- Class 1 (Churn) F1-score: 0.73
+
+3. Random Forest with Engineered Features and SMOTE
+- Dataset: 20% (667 rows)
+- Test Accuracy: 0.9701
+- Class 1 (Churn) Recall: 0.79
+- Class 1 (Churn) F1-score: 0.88
+
+4. Final Scaled SMOTE Random Forest Model
+- Dataset: 80% (2666 rows)
+- Validation Accuracy: 0.9195
+- Class 1 (Churn) Recall: 0.63
+- Class 1 (Churn) F1-score: 0.70
