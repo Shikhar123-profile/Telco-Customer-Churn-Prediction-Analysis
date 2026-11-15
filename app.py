@@ -18,4 +18,4 @@ scaler = joblib.load(scaler_path)
 model = joblib.load(model_path)
 
 st.title("Telco Customer Churn Prediction")
-st.write("Feature columns expected by your scaler:",list(scaler.feature_names_in_))
+st.write("Model columns:", list(model.feature_names_in_))
