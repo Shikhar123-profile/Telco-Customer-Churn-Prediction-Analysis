@@ -17,4 +17,5 @@ model_path = next(BASE_DIR.rglob("*model*.joblib"))
 scaler = joblib.load(scaler_path)
 model = joblib.load(model_path)
 
-st.success("Scaler and model loaded successfully!")
+st.title("Telco Customer Churn Prediction")
+st.write("Feature columns expected by your scaler:",list(scaler.feature_names_in_))
