@@ -11,5 +11,10 @@ with zipfile.ZipFile(BASE_DIR / "churn_scaler (1).zip", "r") as z:
 with zipfile.ZipFile(BASE_DIR / "churn_rf_model (2).zip", "r") as z:
     z.extractall(BASE_DIR)
 
-scaler = joblib.load(BASE_DIR / "churn_scaler.joblib")
-model = joblib.load(BASE_DIR / "churn_rf_model.joblib")
+scaler_path = next(BASE_DIR.rglob("*scaler*.joblib"))
+model_path = next(BASE_DIR.rglob("*model*.joblib"))
+
+scaler = joblib.load(scaler_path)
+model = joblib.load(model_path)
+
+st.success("Scaler and model loaded successfully!")
